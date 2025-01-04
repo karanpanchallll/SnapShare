@@ -13,7 +13,7 @@ export const uploadFile = async (request, response) => {
     try {
         const file = await File.create(fileObj);
         response.status(200).json({ 
-            path: `http://localhost:${process.env.PORT || 8000}/file/${file._id}` // Localhost URL
+            path: `http://${process.env.BASE_URL}/file/${file._id}` // Localhost URL
         });
     } catch (error) {
         console.error(error.message);
