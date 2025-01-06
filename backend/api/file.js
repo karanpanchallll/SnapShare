@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['https://your-frontend-vercel-url.vercel.app'] // Replace with your frontend's actual URL after deployment
+  origin: ['https://snap-share-gold.vercel.app'] // Replace with your frontend's actual URL after deployment
 }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
