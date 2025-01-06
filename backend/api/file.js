@@ -6,7 +6,9 @@ import { uploadFile} from '../controller/filecontroller.js';
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: ['https://your-frontend-vercel-url.vercel.app'] // Replace with your frontend's actual URL after deployment
+}));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
