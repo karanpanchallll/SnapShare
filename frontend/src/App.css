@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #eafaf1; /* Soft mint green background */
+}
+
+.img {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.wrapper {
+  font-family: 'Fira Code', monospace;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #d6f5e9; /* Light pastel teal wrapper */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #3e4a4f;;
+  font-family: 'Fira Code', monospace;
+  opacity: 0.9;
+  display:flex;
+}
+.logo h4{
+  margin-left: 10px;
+}
+
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #3e4a4f; /* Charcoal gray text */
+}
+
+button {
+  font-family: 'Fira Code', monospace;
+  padding: 10px 20px;
+  margin: 15px 0;
+  font-size: 16px;
+  background-color: #a3d8f4; /* Muted sky blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #82c1e3; /* Slightly darker sky blue on hover */
+}
+
+a {
+  display: block;
+  margin-top: 15px;
+  word-wrap: break-word;
+  color: #3e4a4f; /* Charcoal gray text */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.qr-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Initially hidden */
+  transform: scale(0.9); /* Slightly smaller initially */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+.qr-container.visible {
+  opacity: 1; /* Fully visible when file is uploaded */
+  transform: scale(1); /* Normal size */
+}
+
+.qr-container p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #3e4a4f; /* Charcoal gray text */
+}
+
+.qr-container canvas {
+  border: 1px solid #e3d4f3; /* Soft lavender border */
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
